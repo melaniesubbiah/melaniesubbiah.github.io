@@ -79,7 +79,7 @@
             <a href="mailto:melanie.s.subbiah&#64;gmail.com"><i class="ion-email" title="Email"></i></a>
             <a href="assets/melanie-subbiah-resume.pdf" target="_blank">CV</a>
           </div>
-          <p><span class="name">Melanie Subbiah</span>, bunny rabbit girl.<p>
+          <p><span class="name">Melanie Subbiah</span><p>
         </div>
       </section>
       <section class="cv-block info featured-work">
@@ -140,7 +140,7 @@
                 </div>
               </div>
               <p>
-                Advisor: <a href="http://slevi1.mit.edu" target="_blank">Ginger Woman!</a><br>
+                Advisor: <a href="http://slevi1.mit.edu" target="_blank">Kathleen McKeown</a><br>
               </p>
             </div>
             <div class="item">
