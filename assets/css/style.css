@@ -150,8 +150,8 @@ p a:hover {
  }
 
 .cv-block.block-intro .avatar{
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 450px;
     background-size: cover;
     background-repeat: no-repeat;
     margin: auto;
