@@ -128,7 +128,7 @@ p a:hover {
 }
 
 .cv-block.block-intro{
-    text-align: left;
+    text-align: center;
     max-width: 850px;
     margin: auto;
 }
