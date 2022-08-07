@@ -1,2 +1,1 @@
-# melanie-website
-Personal website.
+# Melanie Subbiah's personal website
