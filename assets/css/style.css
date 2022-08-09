@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700;900&display=swap');
 
 :root {
-    --background:       #F4F4DE;    /* beige */
-    --background-shade: #EBEBD3;    /* darker beige */
-    --primary:          #000126;    /* dark blue */
-    --secondary:        #4D50FA;    /* purple */
-    --accent:           #F95738;    /* orange */
-    --highlight:        #FFF024;    /* yellow */
+    --background:       #FAFFFA;    /* light */
+    --background-shade: #F0FAF0;    /* dark */
+    --primary:          #192319;    /* font */
+    --secondary:        #5260FF;    /* blue */
+    --accent:           #FF5252;    /* red */
+    --highlight:        #FFE852;    /* yellow */
 }
 
 h1, h2 {
