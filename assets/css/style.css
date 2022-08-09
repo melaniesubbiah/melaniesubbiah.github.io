@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700;900&display=swap');
 
 :root {
-    --background:       #FAFFFA;    /* light */
-    --background-shade: #FFFFFF;    /* white */
+    --background:       #FAFFFA;    /* bg light */
+    --background-shade: #F5FAF5;    /* bg dark */
     --primary:          #192319;    /* font */
     --secondary:        #5260FF;    /* blue */
     --accent:           #FF5252;    /* red */
