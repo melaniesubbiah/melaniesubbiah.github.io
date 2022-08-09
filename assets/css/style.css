@@ -2,7 +2,7 @@
 
 :root {
     --background:       #FAFFFA;    /* light */
-    --background-shade: #F0F5F0;    /* dark */
+    --background-shade: #fff;    /* dark */
     --primary:          #192319;    /* font */
     --secondary:        #5260FF;    /* blue */
     --accent:           #FF5252;    /* red */
