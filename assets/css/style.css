@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700;900&display=swap');
 
 :root {
     --background:       #FAFFFA;    /* light */
-    --background-shade: #F0FAF0;    /* dark */
+    --background-shade: #F0F5F0;    /* dark */
     --primary:          #192319;    /* font */
     --secondary:        #5260FF;    /* blue */
     --accent:           #FF5252;    /* red */
@@ -10,13 +10,13 @@
 }
 
 h1, h2 {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Figtree', sans-serif;
     color: var(--primary);
     font-weight: 700;
 }
 
 body {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Figtree', sans-serif;
     color: var(--primary);
 }
 
