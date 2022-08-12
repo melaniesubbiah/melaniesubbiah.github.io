@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700;900&display=swap');
 
 :root {
-    --background:       #FFFFFA;    /* bg light */
-    --background-shade: #F5F5F0;    /* bg dark */
+    --background:       #F5F5EB;    /* bg dark */
+    --background-shade: #FFFFFA;    /* bg light */
     --primary:          #192319;    /* font */
     --secondary:        #5260FF;    /* blue */
     --accent:           #FF5252;    /* red */
@@ -49,7 +49,7 @@ p a:hover {
 }
 
 .block-intro {
-    padding-bottom: 2rem !important;
+    padding-bottom: 4rem !important;
 }
 
 .page {
@@ -128,19 +128,19 @@ p a:hover {
 }
 
 .cv-block.block-intro{
-    text-align: center;
-    max-width: 850px;
+    text-align: left;
+    max-width: 850px; 
     margin: auto;
 }
 
-.cv-block.block-intro .about-me{
+.cv-block.block-intro .about{
     max-width: 800px;
     margin: auto;
 }
 
 .cv-block.block-intro p{
-    font-size: 1.5em;
-    font-weight: 700;
+    font-size: 1.2em;
+    font-weight: 400;
     margin-bottom: 30px;
 }
 
@@ -150,13 +150,12 @@ p a:hover {
  }
 
 .cv-block.block-intro .avatar{
-    width: 350px;
-    height: 450px;
+    height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
     margin: auto;
-    border-radius: 100px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-radius: 5px;
 }
 
 .exp-icon {
