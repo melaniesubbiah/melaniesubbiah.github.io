@@ -48,10 +48,6 @@ p a:hover {
     padding-top: 0px !important;
 }
 
-.block-intro {
-   
-}
-
 .page {
     background-color: var(--background);
 }
@@ -79,23 +75,6 @@ p a:hover {
 
 .page-navbar.fixed-top + .page{
     padding-top: 30px;
-}
-
-.download-template{
-    color: #fff;
-    font-weight: 800;
-    background-color: var(--accent);
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: 12px;
-    padding: 7px 24px;
-    border-radius: 30px;
-}
-
-.download-template:hover{
-    background-color: var(--accent);
-    opacity: .8;
 }
 
 .gradient{
@@ -138,7 +117,7 @@ p a:hover {
 }
 
 .cv-block.block-intro p{
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 400;
 }
 
@@ -315,23 +294,23 @@ p a:hover {
 }
 
 .block-intro .social-icons{
-    margin-top: 20px;
-    margin-bottom: 16px;
+    margin: 20 0px;
 }
 
 .block-intro .social-icons a{
     font-size: 16px;
+    font-weight:  600;
     margin: 0 3px;
     color: #ffffff;
     border: 1px solid var(--accent);
     opacity: 1;
     border-radius: 50%;
-    width: 28px;
+    width: 30px;
     display: inline-block;
-    height: 28px;
+    height: 30px;
     text-align: center;
     background-color: var(--accent);
-    line-height: 27px;
+    line-height: 29px;
 }
 
 .block-intro .social-icons a:hover{
