@@ -41,7 +41,7 @@ p a:hover {
 }
 
 .feature {
-    max-width: 200px;
+    max-height: 150px;
 }
 
 .featured-work {
@@ -167,6 +167,11 @@ p a:hover {
 .cv-block ul{
     list-style-type: circle;
     margin-top: -15px;
+}
+
+.info-card ul{
+    list-style-type: circle;
+    margin-left: -18px;
 }
 
 .cv-block.info .group:not(:first-child){
