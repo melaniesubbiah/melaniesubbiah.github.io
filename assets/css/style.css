@@ -101,10 +101,6 @@ p a:hover {
     text-decoration: none;
 }
 
-.cv-block{
-
-}
-
 .cv-block.block-intro{
     text-align: left;
     margin: auto;
@@ -166,6 +162,11 @@ p a:hover {
 
 #features {
     max-width: inherit;
+}
+
+.cv-block ul{
+    list-style-type: circle;
+    margin-top: -15px;
 }
 
 .cv-block.info .group:not(:first-child){
