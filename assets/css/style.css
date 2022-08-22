@@ -81,26 +81,6 @@ p a:hover {
     background-color: white;
 }
 
-.cta{
-    color: #fff;
-    background-color: var(--accent);
-    border: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: 13px;
-    padding: 10px 24px;
-    border-radius: 40px;
-}
-
-.cta:hover{
-    color: #fff;
-    border: none;
-    background-color: var(--accent);
-    opacity: 0.75;
-    text-decoration: none;
-}
-
 .cv-block.block-intro{
     text-align: left;
     margin: auto;
@@ -116,11 +96,6 @@ p a:hover {
     font-size: 1.1em;
     font-weight: 400;
 }
-
-.cv-block.block-intro .btn {
-  padding: 0.375rem 1rem;
-  border-radius: 2em;
- }
 
 .cv-block.block-intro .avatar{
     background-size: cover;
@@ -233,15 +208,6 @@ p a:hover {
     margin-top: 25px;
     font-size: 1rem;
     font-weight: 600;
-}
-
-.cv-block .info-card.skills .progress{
-    height: 3px;
-    background-color: #ddd;
-}
-
-.progress-bar {
-    background-color: var(--primary) !important;
 }
 
 .cv-block .info-card.contact-info .icon{
