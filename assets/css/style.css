@@ -58,6 +58,11 @@ p a:hover {
 
 .page-navbar .navbar-nav .nav-item a{
     font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.page-navbar .navbar-nav .nav-item a:hover{
+    background-color: var(--highlight);
 }
 
 .page-navbar.navbar-light .navbar-nav .nav-link {
@@ -316,5 +321,10 @@ p a:hover {
 @media (max-width:  768px){
     .avatar {
         max-height: 350px;
+    }
+
+    .nav-item {
+        padding: 1rem;
+        text-align: right;
     }
 }
