@@ -312,3 +312,9 @@ p a:hover {
         padding-top: 6rem;
     }
 }
+
+@media (max-width:  768px){
+    .avatar {
+        max-height: 350px;
+    }
+}
