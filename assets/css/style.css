@@ -252,6 +252,7 @@ p a:hover {
 
 .page-footer .social-icons a{
     font-size: 16px;
+    font-weight: 600;
     margin: 0 3px;
     color: #ffffff;
     border: 1px solid var(--accent);
@@ -275,7 +276,7 @@ p a:hover {
 }
 
 .block-intro .social-icons a{
-    font-size: 16px;
+    font-size: 14px;
     font-weight:  600;
     margin: 0 3px;
     color: #ffffff;
