@@ -5,8 +5,8 @@
     --background-shade: #FFFFFA;    /* bg light */
     --primary:          #192319;    /* font */
     --secondary:        #5260FF;    /* blue  5260FF*/
-    --accent:           #FF5252;    /* red  FF5252*/
-    --highlight:        #FDDA77;    /* yellow FFE852*/
+    --accent:           #5F0F40;    /* purple */
+    --highlight:        #FBC123;    /* yellow */
 }
 
 h1, h2 {
