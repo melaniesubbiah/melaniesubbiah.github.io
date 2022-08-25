@@ -71,7 +71,7 @@ p a:hover {
 }
 
 .page-navbar .logo{
-    color: var(--primary);
+    color: var(--secondary);
     font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: 800;
