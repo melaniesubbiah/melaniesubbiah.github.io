@@ -1,0 +1,37 @@
+---
+title: Mango & Luna · Melanie Subbiah
+description: Meet Mango and Luna, the two dogs who live in the header of Melanie Subbiah's website.
+nav: dogs
+---
+<section class="page-head">
+  <div class="wrap">
+    <h1>Meet Mango &amp; Luna</h1>
+    <p class="lede lede-wide">I adopted two dogs during my PhD. Mango is a 6-year-old pitbull/cattle dog mix and Luna is a 3-year-old cattle dog/rat terrier mix. They share a natural athletic ability but Mango prefers to lie on the couch as much as possible, while Luna has a hard time staying still.</p>
+  </div>
+</section>
+
+<div class="wrap page-body">
+  <div class="dog-portraits">
+    <figure class="dog-portrait" data-dog="mango">
+      <figcaption><strong>Mango</strong></figcaption>
+      <img src="assets/img/mango.jpg" alt="Mango, a black dog with a white chest patch, sitting on a wood floor and looking up" width="1000" height="1000">
+    </figure>
+    <figure class="dog-portrait" data-dog="luna">
+      <figcaption><strong>Luna</strong></figcaption>
+      <img src="assets/img/luna.jpg" alt="Luna, a white dog with black ears and a speckled coat, sitting in her bed" width="628" height="1000">
+    </figure>
+  </div>
+  <p class="more"><a href="index.html">&larr; Back to the research</a></p>
+</div>
+
+<script>
+  // dogs.html#mango / #luna (from the header dogs) outlines that dog's photo. The figures have no
+  // matching id, so the page still opens at the top instead of jumping down to the photo.
+  function pickDog() {
+    document.querySelectorAll(".dog-portrait").forEach(f => {
+      f.classList.toggle("is-picked", "#" + f.dataset.dog === location.hash);
+    });
+  }
+  pickDog();
+  window.addEventListener("hashchange", pickDog);
+</script>
