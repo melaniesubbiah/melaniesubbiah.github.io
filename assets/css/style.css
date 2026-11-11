@@ -149,21 +149,10 @@ mark {
 .dog { display: block; flex: none; text-decoration: none; border-radius: 6px; }
 .dog img { display: block; width: 100%; height: auto; }
 .dog:hover img { animation: hop .5s ease 2; }
-.dog-1 { width: 34px; margin-top: -4px; animation: trot-in 1.4s cubic-bezier(.2, .7, .3, 1) both; }
+.dog-1 { width: 34px; margin-top: -4px; }
 .dog-1 img { filter: drop-shadow(0 0 .6px var(--header-ink)) drop-shadow(0 0 .6px var(--header-ink)); }   /* Mango is black: outline him against the olive */
-.dogs-arrived .dog-1 { animation: none; }
 .dog-2 { width: 26px; margin-top: -3px; }
-.dog-2 img { animation: hop .5s ease .3s 1; }
 
-/* Mango trots in from the left, bobbing as he goes */
-@keyframes trot-in {
-  0%   { transform: translate(-60px, 0); opacity: 0; }
-  20%  { transform: translate(-45px, -4px); opacity: 1; }
-  40%  { transform: translate(-30px, 0); }
-  60%  { transform: translate(-16px, -4px); }
-  80%  { transform: translate(-5px, 0); }
-  100% { transform: translate(0, 0); }
-}
 @keyframes hop {
   0%, 100% { transform: translateY(0); }
   40%      { transform: translateY(-7px) rotate(-6deg); }
@@ -179,7 +168,7 @@ mark {
 .site-header a:focus-visible { outline-color: var(--header-accent); }
 
 @media (prefers-reduced-motion: reduce) {
-  .dog-1, .dog-2 img, .dog:hover img { animation: none; }
+  .dog:hover img { animation: none; }
 }
 
 @media (max-width: 720px) {
@@ -207,9 +196,8 @@ mark {
 .profile-links .email { color: var(--ink-soft); }
 .email strong { color: var(--ink); font-weight: 600; }
 /* the email in the user's handwriting, sized to sit on the text line beside "Contact:" */
-.email-link { display: inline-block; vertical-align: middle; text-decoration: none; }
+.email-link { display: inline-block; vertical-align: middle; }   /* an image of the address, not a link */
 .email-link .handwritten { display: block; height: 17px; width: auto; }   /* same size in the sidebar and the footer */
-.email-link:hover .handwritten { opacity: .7; }
 .profile-links .email { white-space: nowrap; }   /* "Contact:" + email together span the headshot width */
 @media (prefers-color-scheme: dark) { .email-link .handwritten { filter: invert(1) sepia(.25) brightness(.95); } }
 

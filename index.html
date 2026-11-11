@@ -24,13 +24,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script>
-    // the dog runs in on the first page of a visit only
-    try {
-      if (sessionStorage.getItem("dogs-arrived")) document.documentElement.classList.add("dogs-arrived");
-      else sessionStorage.setItem("dogs-arrived", "1");
-    } catch (e) {}
-  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -58,7 +51,7 @@
     <h1 class="profile-name">Melanie Subbiah</h1>
     <p class="profile-title">Postdoctoral Researcher<br>Computer Science<br>Brown University</p>
     <ul class="profile-links">
-      <li class="email"><strong>Contact:</strong> <a class="email-link" href="mailto:m.subbiah&#64;brown.edu"><img class="handwritten" src="assets/img/email-dark.png" alt="m.subbiah&#64;brown.edu" width="1935" height="188"></a></li>
+      <li class="email"><strong>Contact:</strong> <span class="email-link"><img class="handwritten" src="assets/img/email-dark.png" alt="m.subbiah&#64;brown.edu" width="1935" height="188"></span></li>
       <li class="icons">
         <a class="icon-link" href="https://scholar.google.com/citations?user=pe3_XoIAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><i class="ion-university" aria-hidden="true"></i></a>
         <a class="icon-link icon-cv" href="assets/cv-melaniesubbiah.pdf" target="_blank" rel="noopener" title="CV (PDF)">CV</a>
@@ -136,7 +129,7 @@
     <div class="wrap footer-inner">
       <p class="footer-name"><img class="signature" src="assets/img/signature-dark.png" alt="Melanie Subbiah" width="1472" height="220"></p>
       <ul class="footer-links">
-        <li class="email"><strong>Contact:</strong> <a class="email-link" href="mailto:m.subbiah&#64;brown.edu"><img class="handwritten" src="assets/img/email-dark.png" alt="m.subbiah&#64;brown.edu" width="1935" height="188"></a></li>
+        <li class="email"><strong>Contact:</strong> <span class="email-link"><img class="handwritten" src="assets/img/email-dark.png" alt="m.subbiah&#64;brown.edu" width="1935" height="188"></span></li>
         <li class="icons">
           <a class="icon-link" href="https://scholar.google.com/citations?user=pe3_XoIAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><i class="ion-university" aria-hidden="true"></i></a>
           <a class="icon-link icon-cv" href="assets/cv-melaniesubbiah.pdf" target="_blank" rel="noopener" title="CV (PDF)">CV</a>
