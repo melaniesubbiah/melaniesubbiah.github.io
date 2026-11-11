@@ -18,10 +18,10 @@
   --flow-ms: #7B4A86;   /* mentee flow: master's students (the plum of --t-3) */
 
   /* research-theme colors, assigned to tags in display order by build.py (THEME_COLORS) */
-  --t-1:  #C2501F;   /* burnt orange */
-  --t-2:  #56723A;   /* olive */
+  --t-1:  #9B2226;   /* deep red */
+  --t-2:  #2E73AE;   /* blue */
   --t-3:  #7B4A86;   /* plum */
-  --t-4:  #C99412;   /* mustard */
+  --t-4:  #94694A;   /* brown */
   --t-5:  #D07A8C;   /* rose */
   --t-6:  #8A5A3B;   /* umber */
   --t-7:  #2F7A78;   /* teal */
@@ -66,10 +66,10 @@
     --award-bg:  #FBDF8C;   /* award stickers look the same in both modes */
     --award-ink: #3D2E00;
     /* --header-* are deliberately not overridden: the olive header is identical in both modes */
-    --t-1:  #EE8B5A;
-    --t-2:  #A3C27C;
-    --t-3:  #C69AD2;
-    --t-4:  #E9BC4F;
+    --t-1:  #C8585E;
+    --t-2:  #3F78BD;
+    --t-3:  #D2A2E8;
+    --t-4:  #C69A72;
     --t-5:  #F4B6C4;
     --t-6:  #C9986F;
     --t-7:  #6CC0BC;
