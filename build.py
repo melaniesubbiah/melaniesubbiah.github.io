@@ -287,12 +287,13 @@ def render_pub(p, themes, blurb=False):
     note = f'\n    <span class="pub-blurb">{esc(p["blurb"])}</span>' if blurb and p["blurb"] else ""
     award = f'<span class="pub-award">{render_award(p)}</span>' if p["award"] else ""
     awarded = ' data-award' if p["award"] else ""
+    dots = render_dots(p, themes)
+    marks = f'<span class="pub-marks">{dots}{award}</span>' if dots or award else ""   # theme dots and award sticker share one line under the venue
     return f"""<li class="pub" data-themes="{esc(keys)}"{awarded}>
-  <span class="pub-venue">{esc(p["venue"])}{render_dots(p, themes)}{award}</span>
+  <span class="pub-venue">{esc(p["venue"])}{marks}</span>
   <div class="pub-body">
     {render_title(p)}
     <span class="pub-authors">{p["authors"]}</span>{note}
-    <span class="pub-meta">{render_links(p)}</span>
   </div>
 </li>"""
 
