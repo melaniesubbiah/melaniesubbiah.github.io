@@ -9,7 +9,7 @@ nav: publications
       <h1>Publications</h1>
       <a class="icon-link" href="https://scholar.google.com/citations?user=pe3_XoIAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><i class="ion-university" aria-hidden="true"></i></a>
     </div>
-    <div class="filters" role="group" aria-label="Filter by research theme">
+    <div class="filters" role="group" aria-label="Filter by research theme or awards">
 {{ theme_filters }}
     </div>
   </div>
@@ -20,13 +20,14 @@ nav: publications
 </div>
 
 <script>
-  // Theme filter: hides entries without the chosen theme.
+  // Theme filter: hides entries without the chosen theme ("awards" keeps award-winning papers).
   const buttons = document.querySelectorAll(".filter");
   buttons.forEach(btn => btn.addEventListener("click", () => {
     const theme = btn.dataset.filter;
     buttons.forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
     document.querySelectorAll(".pub").forEach(li => {
-      li.hidden = theme !== "" && !li.dataset.themes.split(" ").includes(theme);
+      const keep = theme === "" || (theme === "awards" ? li.hasAttribute("data-award") : li.dataset.themes.split(" ").includes(theme));
+      li.hidden = !keep;
     });
   }));
   // publications.html#<theme> opens with that filter applied (linked from the homepage)
