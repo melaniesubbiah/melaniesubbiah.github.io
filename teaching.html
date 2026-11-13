@@ -21,7 +21,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reddit+Sans:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -52,56 +52,73 @@
 </section>
 
 <div class="wrap page-body">
-  <section class="block" id="teaching">
-    <h2>Teaching</h2>
-    <div class="course-list">
-      <article class="course">
-        <div class="course-meta"><p class="course-when">2023</p><p class="course-role">Instructor</p></div>
-        <div class="course-main">
-          <h3>Discrete Mathematics</h3>
-          <p class="course-where">Columbia University</p>
-        </div>
-        <dl class="ratings">
-          <div><dt>Instructor quality</dt><dd><span class="meter" style="--v: .9"></span>4.5</dd></div>
-          <div><dt>Course quality</dt><dd><span class="meter" style="--v: .84"></span>4.2</dd></div>
-        </dl>
-      </article>
-      <article class="course">
-        <div class="course-meta"><p class="course-when">2022, 2023</p><p class="course-role">Teaching assistant &amp; guest lecturer</p></div>
-        <div class="course-main">
-          <h3>Natural Language Generation &amp; Summarization</h3>
-          <p class="course-where">Columbia University</p>
-        </div>
-        <dl class="ratings">
-          <div><dt>TA quality, 2022</dt><dd><span class="meter" style="--v: .98"></span>4.9</dd></div>
-          <div><dt>TA quality, 2023</dt><dd><span class="meter" style="--v: .94"></span>4.7</dd></div>
-        </dl>
-      </article>
-      <article class="course">
-        <div class="course-meta"><p class="course-when">2014&ndash;2017</p><p class="course-role">Teaching assistant</p></div>
-        <div class="course-main">
-          <h3>Intro CS &amp; Data Structures</h3>
-          <p class="course-where">Williams College</p>
-        </div>
-        <dl class="ratings">
-          <div><dt>Semesters as a TA</dt><dd><span class="pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>6</dd></div>
-        </dl>
-      </article>
-    </div>
+  <div class="teaching-cols">   <!-- courses taught on the left, guest lectures on the right -->
+    <section class="block" id="teaching">
+      <h2>Teaching</h2>
+      <div class="course-list">
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2023</p><p class="course-role">Instructor</p></div>
+          <div class="course-main">
+            <h3>Discrete Mathematics</h3>
+            <p class="course-where">Columbia University</p>
+          </div>
+        </article>
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2022, 2023</p><p class="course-role">Teaching assistant</p></div>
+          <div class="course-main">
+            <h3>Natural Language Generation &amp; Summarization</h3>
+            <p class="course-where">Columbia University</p>
+          </div>
+        </article>
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2014&ndash;2017</p><p class="course-role">Teaching assistant</p></div>
+          <div class="course-main">
+            <h3>Intro CS &amp; Data Structures</h3>
+            <p class="course-where">Williams College</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <h3 class="subhead">Guest lectures</h3>
-    <ul class="lecture-list">
-      <li><span class="lecture-when">2025</span><span class="lecture-what"><strong>Computing in Context</strong> Columbia University</span></li>
-      <li><span class="lecture-when">2024</span><span class="lecture-what"><strong>Global Teaching Labs</strong> MIT &amp; University of Montevideo, Uruguay</span></li>
-      <li><span class="lecture-when">2023</span><span class="lecture-what"><strong>Computational Journalism</strong> Columbia University</span></li>
-      <li><span class="lecture-when">2022, 2023</span><span class="lecture-what"><strong>Natural Language Generation &amp; Summarization</strong> Columbia University</span></li>
-    </ul>
-  </section>
+    <section class="block" id="guest-lectures">
+      <h2>Guest lectures</h2>
+      <div class="course-list">
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2025</p></div>
+          <div class="course-main">
+            <h3>Computing in Context</h3>
+            <p class="course-where">Columbia University</p>
+          </div>
+        </article>
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2024</p></div>
+          <div class="course-main">
+            <h3>Global Teaching Labs</h3>
+            <p class="course-where">MIT &amp; University of Montevideo, Uruguay</p>
+          </div>
+        </article>
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2023</p></div>
+          <div class="course-main">
+            <h3>Computational Journalism</h3>
+            <p class="course-where">Columbia University</p>
+          </div>
+        </article>
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2022, 2023</p></div>
+          <div class="course-main">
+            <h3>Natural Language Generation &amp; Summarization</h3>
+            <p class="course-where">Columbia University</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
 
   <section class="block" id="mentoring">
     <h2>Mentoring</h2>
-    <p class="block-intro">Mentoring students is one of my favorite parts of research. This diagram summarizes outcomes for students I have worked with.</p>
-    <figure class="mentee-flow"><svg viewBox="0 0 760 234" role="img" aria-label="Flow of 11 Columbia research mentees from undergrad or master's, to what came of the project, to where they went next"><desc>2 students: Master&#x27;s → Paper → Ph.D.; 2 students: Undergrad → Master&#x27;s → Paper → Ph.D.; 1 student: Undergrad → Paper → Ph.D.; 5 students: Master&#x27;s → Paper → Industry; 1 student: Undergrad → Thesis → Industry</desc><path class="flow-band flow-ug" d="M116.0,24.0 C292.7,24.0 292.7,24.0 469.3,24.0 L469.3,40.0 C292.7,40.0 292.7,40.0 116.0,40.0 Z"></path><path class="flow-band flow-ug" d="M481.3,24.0 C566.7,24.0 566.7,24.0 652.0,24.0 L652.0,40.0 C566.7,40.0 566.7,40.0 481.3,40.0 Z"></path><path class="flow-band flow-ug" d="M116.0,40.0 C292.7,40.0 292.7,54.0 469.3,54.0 L469.3,70.0 C292.7,70.0 292.7,56.0 116.0,56.0 Z"></path><path class="flow-band flow-ug" d="M116.0,56.0 C201.3,56.0 201.3,84.0 286.7,84.0 L286.7,116.0 C201.3,116.0 201.3,88.0 116.0,88.0 Z"></path><path class="flow-band flow-ms" d="M481.3,54.0 C566.7,54.0 566.7,40.0 652.0,40.0 L652.0,120.0 C566.7,120.0 566.7,134.0 481.3,134.0 Z"></path><path class="flow-band flow-ug" d="M481.3,134.0 C566.7,134.0 566.7,134.0 652.0,134.0 L652.0,182.0 C566.7,182.0 566.7,182.0 481.3,182.0 Z"></path><path class="flow-band flow-ms" d="M481.3,182.0 C566.7,182.0 566.7,182.0 652.0,182.0 L652.0,214.0 C566.7,214.0 566.7,214.0 481.3,214.0 Z"></path><path class="flow-band flow-ug" d="M298.7,84.0 C384.0,84.0 384.0,70.0 469.3,70.0 L469.3,102.0 C384.0,102.0 384.0,116.0 298.7,116.0 Z"></path><path class="flow-band flow-ms" d="M298.7,116.0 C384.0,116.0 384.0,102.0 469.3,102.0 L469.3,214.0 C384.0,214.0 384.0,228.0 298.7,228.0 Z"></path><rect class="flow-node" x="104.0" y="24.0" width="12" height="64.0" rx="3"></rect><rect class="flow-node" x="286.7" y="84.0" width="12" height="144.0" rx="3"></rect><rect class="flow-node" x="469.3" y="24.0" width="12" height="16.0" rx="3"></rect><rect class="flow-node" x="469.3" y="54.0" width="12" height="160.0" rx="3"></rect><rect class="flow-node" x="652.0" y="24.0" width="12" height="96.0" rx="3"></rect><rect class="flow-node" x="652.0" y="134.0" width="12" height="80.0" rx="3"></rect><text class="flow-label" x="96.0" y="56.0" text-anchor="end" dy=".35em">Undergrad <tspan class="flow-count">4</tspan></text><text class="flow-label" x="278.7" y="172.0" text-anchor="end" dy=".35em">Master&#x27;s <tspan class="flow-count">9</tspan></text><text class="flow-label" x="469.3" y="16.0">Thesis <tspan class="flow-count">1</tspan></text><text class="flow-label flow-label-mid" x="489.3" y="134.0" dy=".35em">Paper <tspan class="flow-count">10</tspan></text><text class="flow-label" x="672.0" y="72.0" dy=".35em">Industry <tspan class="flow-count">6</tspan></text><text class="flow-label" x="672.0" y="174.0" dy=".35em">Ph.D. <tspan class="flow-count">5</tspan></text></svg><figcaption class="flow-key"><span><i class="flow-swatch flow-ug"></i>Started as an undergrad</span><span><i class="flow-swatch flow-ms"></i>Started as a master's student</span></figcaption></figure>
+    <p class="block-intro">Mentoring students is one of my favorite parts of research. This <a href="https://en.wikipedia.org/wiki/Sankey_diagram" target="_blank" rel="noopener">Sankey diagram</a> summarizes outcomes for students I have worked with.</p>
+    <figure class="mentee-flow"><svg viewBox="0 0 820 280" role="img" aria-label="Flow of 11 Columbia research mentees from undergrad or master's, to what came of the project, to where they went next"><desc>2 students: Master&#x27;s → Published a paper → Completing a PhD; 2 students: Undergrad → Master&#x27;s → Published a paper → Completing a PhD; 1 student: Undergrad → Published a paper → Completing a PhD; 5 students: Master&#x27;s → Published a paper → Working in industry; 1 student: Undergrad → Wrote a thesis → Working in industry</desc><path class="flow-band flow-ug" d="M116.0,36.0 C291.3,36.0 291.3,36.0 466.7,36.0 L466.7,52.0 C291.3,52.0 291.3,52.0 116.0,52.0 Z"></path><path class="flow-band flow-ug" d="M478.7,36.0 C563.3,36.0 563.3,36.0 648.0,36.0 L648.0,52.0 C563.3,52.0 563.3,52.0 478.7,52.0 Z"></path><path class="flow-band flow-ug" d="M116.0,52.0 C291.3,52.0 291.3,66.0 466.7,66.0 L466.7,82.0 C291.3,82.0 291.3,68.0 116.0,68.0 Z"></path><path class="flow-band flow-ug" d="M116.0,68.0 C200.7,68.0 200.7,96.0 285.3,96.0 L285.3,128.0 C200.7,128.0 200.7,100.0 116.0,100.0 Z"></path><path class="flow-band flow-ms" d="M478.7,66.0 C563.3,66.0 563.3,52.0 648.0,52.0 L648.0,132.0 C563.3,132.0 563.3,146.0 478.7,146.0 Z"></path><path class="flow-band flow-ug" d="M478.7,146.0 C563.3,146.0 563.3,146.0 648.0,146.0 L648.0,194.0 C563.3,194.0 563.3,194.0 478.7,194.0 Z"></path><path class="flow-band flow-ms" d="M478.7,194.0 C563.3,194.0 563.3,194.0 648.0,194.0 L648.0,226.0 C563.3,226.0 563.3,226.0 478.7,226.0 Z"></path><path class="flow-band flow-ug" d="M297.3,96.0 C382.0,96.0 382.0,82.0 466.7,82.0 L466.7,114.0 C382.0,114.0 382.0,128.0 297.3,128.0 Z"></path><path class="flow-band flow-ms" d="M297.3,128.0 C382.0,128.0 382.0,114.0 466.7,114.0 L466.7,226.0 C382.0,226.0 382.0,240.0 297.3,240.0 Z"></path><line class="flow-leader" x1="472.7" y1="32.0" x2="472.7" y2="24.0"></line><line class="flow-leader" x1="472.7" y1="230.0" x2="472.7" y2="260.0"></line><rect class="flow-node" x="104.0" y="36.0" width="12" height="64.0" rx="3"></rect><rect class="flow-node" x="285.3" y="96.0" width="12" height="144.0" rx="3"></rect><rect class="flow-node" x="466.7" y="36.0" width="12" height="16.0" rx="3"></rect><rect class="flow-node" x="466.7" y="66.0" width="12" height="160.0" rx="3"></rect><rect class="flow-node" x="648.0" y="36.0" width="12" height="96.0" rx="3"></rect><rect class="flow-node" x="648.0" y="146.0" width="12" height="80.0" rx="3"></rect><text class="flow-label" x="96.0" y="68.0" text-anchor="end" dy=".35em">Undergrad <tspan class="flow-count">4</tspan></text><text class="flow-label" x="277.3" y="184.0" text-anchor="end" dy=".35em">Master&#x27;s <tspan class="flow-count">9</tspan></text><text class="flow-label" x="472.7" y="19.0" text-anchor="middle">Wrote a thesis <tspan class="flow-count">1</tspan></text><text class="flow-label" x="472.7" y="274.0" text-anchor="middle">Published a paper <tspan class="flow-count">10</tspan></text><text class="flow-label" x="668.0" y="84.0" dy=".35em">Working in industry <tspan class="flow-count">6</tspan></text><text class="flow-label" x="668.0" y="186.0" dy=".35em">Completing a PhD <tspan class="flow-count">5</tspan></text></svg><figcaption class="flow-key"><span><i class="flow-swatch flow-ug"></i>Started as an undergrad</span><span><i class="flow-swatch flow-ms"></i>Started as a master's student</span></figcaption></figure>
   </section>
 
 </div>

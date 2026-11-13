@@ -60,6 +60,10 @@ MENTEES = [
 ]
 # columns left to right, nodes top to bottom (this order keeps bands from crossing)
 FLOW_COLUMNS = [["Undergrad"], ["Master's"], ["Thesis", "Paper"], ["Industry", "Ph.D."]]
+# what the diagram shows for each milestone (nodes not listed show their key)
+FLOW_LABELS = {"Thesis": "Wrote a thesis", "Paper": "Published a paper",
+               "Industry": "Working in industry", "Ph.D.": "Completing a PhD"}
+FLOW_BELOW = {"Paper"}   # nodes labelled below the diagram (with a leader line) instead of beside
 
 LINK_FIELDS = [  # (bib field, label) in display order
     ("url", "Paper"),
@@ -281,12 +285,14 @@ def render_dots(p, themes):
 def render_pub(p, themes, blurb=False):
     keys = " ".join(p["themes"])
     note = f'\n    <span class="pub-blurb">{esc(p["blurb"])}</span>' if blurb and p["blurb"] else ""
-    return f"""<li class="pub" data-themes="{esc(keys)}">
-  <span class="pub-venue">{esc(p["venue"])}{render_dots(p, themes)}</span>
+    award = f'<span class="pub-award">{render_award(p)}</span>' if p["award"] else ""
+    awarded = ' data-award' if p["award"] else ""
+    return f"""<li class="pub" data-themes="{esc(keys)}"{awarded}>
+  <span class="pub-venue">{esc(p["venue"])}{render_dots(p, themes)}{award}</span>
   <div class="pub-body">
     {render_title(p)}
     <span class="pub-authors">{p["authors"]}</span>{note}
-    <span class="pub-meta">{render_award(p)}{render_links(p)}</span>
+    <span class="pub-meta">{render_links(p)}</span>
   </div>
 </li>"""
 
@@ -322,6 +328,7 @@ def render_theme_filters(themes):
     buttons = ['<button class="filter" type="button" data-filter="" aria-pressed="true">All</button>']
     buttons += [f'<button class="filter" type="button" data-filter="{k}" {theme_attrs(k, c)} aria-pressed="false">{esc(label)}</button>'
                 for k, label, c in themes]
+    buttons.append('<button class="filter filter-award" type="button" data-filter="awards" aria-pressed="false">Awards</button>')
     return "\n".join(buttons)
 
 
@@ -329,7 +336,7 @@ def render_mentee_flow():
     """Flow (Sankey) diagram of MENTEES as inline SVG, with a color key. Bands are colored by
     where the student started (undergrad or master's)."""
     unit, gap, node_w = 16, 14, 12          # px per student, gap between nodes, node width
-    width, pad_l, pad_r, top = 760, 104, 96, 24   # top: room for a label above a thin node
+    width, pad_l, pad_r, top = 820, 104, 160, 36  # top: room for a label above a thin node; pad_r fits "Working in industry 6"
     ncol = len(FLOW_COLUMNS)
     col_x = [pad_l + c * (width - pad_l - pad_r - node_w) / (ncol - 1) for c in range(ncol)]
     col_of = {name: c for c, col in enumerate(FLOW_COLUMNS) for name in col}
@@ -352,7 +359,8 @@ def render_mentee_flow():
             if h:
                 nodes[(c, name)] = [col_x[c], y, h]
                 y += h + gap
-    height = max(y + h for _, y, h in nodes.values()) + 6
+    bottom = max(y + h for _, y, h in nodes.values())
+    height = bottom + (40 if any(k[1] in FLOW_BELOW for k in nodes) else 6)   # room for labels hung below the diagram
     out_y = {k: v[1] for k, v in nodes.items()}
     in_y = {k: v[1] for k, v in nodes.items()}
     color = {"Undergrad": "ug", "Master's": "ms"}
@@ -369,28 +377,35 @@ def render_mentee_flow():
         d = (f"M{x0:.1f},{y0:.1f} C{mx:.1f},{y0:.1f} {mx:.1f},{y1:.1f} {x1:.1f},{y1:.1f} "
              f"L{x1:.1f},{y1 + h:.1f} C{mx:.1f},{y1 + h:.1f} {mx:.1f},{y0 + h:.1f} {x0:.1f},{y0 + h:.1f} Z")
         bands.append(f'<path class="flow-band flow-{color[start]}" d="{d}"></path>')
-    rects, labels = [], []
+    rects, labels, leaders = [], [], []
     for (c, name), (x, y, h) in nodes.items():
         rects.append(f'<rect class="flow-node" x="{x:.1f}" y="{y:.1f}" width="{node_w}" height="{h:.1f}" rx="3"></rect>')
         n = max(size[(c, name)])
-        text = f'{esc(name)} <tspan class="flow-count">{n}</tspan>'
+        text = f'{esc(FLOW_LABELS.get(name, name))} <tspan class="flow-count">{n}</tspan>'
         if c < 2:     # starting columns: label to the left, clear of the bands
             # Master's: centre on the part of the node below its incoming bands
             inc = sum(len(v) for (a, b, _), v in links.items() if b == (c, name)) * unit
             labels.append(f'<text class="flow-label" x="{x - 8:.1f}" y="{y + inc + (h - inc) / 2:.1f}" '
                           f'text-anchor="end" dy=".35em">{text}</text>')
-        elif h <= unit:   # a one-student node is too thin to label beside, so label it above
-            labels.append(f'<text class="flow-label" x="{x:.1f}" y="{y - 8:.1f}">{text}</text>')
+        elif name in FLOW_BELOW:   # label hung below the whole diagram, tied to its node by a thin line
+            cx = x + node_w / 2
+            leaders.append(f'<line class="flow-leader" x1="{cx:.1f}" y1="{y + h + 4:.1f}" x2="{cx:.1f}" y2="{bottom + 20:.1f}"></line>')
+            labels.append(f'<text class="flow-label" x="{cx:.1f}" y="{bottom + 34:.1f}" text-anchor="middle">{text}</text>')
+        elif h <= unit:   # a one-student node is too thin to label beside, so label it above, tied by a thin line
+            cx = x + node_w / 2
+            leaders.append(f'<line class="flow-leader" x1="{cx:.1f}" y1="{y - 4:.1f}" x2="{cx:.1f}" y2="{y - 12:.1f}"></line>')
+            labels.append(f'<text class="flow-label" x="{cx:.1f}" y="{y - 17:.1f}" text-anchor="middle">{text}</text>')
         else:
             cls = "flow-label" + (" flow-label-mid" if c < ncol - 1 else "")
             labels.append(f'<text class="{cls}" x="{x + node_w + 8:.1f}" y="{y + h / 2:.1f}" dy=".35em">{text}</text>')
     counts = {}
     for _, path in MENTEES:
-        counts[" \u2192 ".join(path)] = counts.get(" \u2192 ".join(path), 0) + 1
+        route = " \u2192 ".join(FLOW_LABELS.get(n, n) for n in path)
+        counts[route] = counts.get(route, 0) + 1
     desc = "; ".join(f"{n} {'student' if n == 1 else 'students'}: {route}" for route, n in counts.items())
     return (f'<figure class="mentee-flow"><svg viewBox="0 0 {width} {height:.0f}" role="img" '
             f'aria-label="Flow of {len(MENTEES)} Columbia research mentees from undergrad or master\'s, to what came of the project, to where they went next">'
-            f'<desc>{esc(desc)}</desc>{"".join(bands)}{"".join(rects)}{"".join(labels)}</svg>'
+            f'<desc>{esc(desc)}</desc>{"".join(bands)}{"".join(leaders)}{"".join(rects)}{"".join(labels)}</svg>'
             '<figcaption class="flow-key"><span><i class="flow-swatch flow-ug"></i>Started as an undergrad</span>'
             '<span><i class="flow-swatch flow-ms"></i>Started as a master\'s student</span></figcaption></figure>')
 

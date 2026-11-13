@@ -21,7 +21,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reddit+Sans:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -51,12 +51,13 @@
       <h1>Publications</h1>
       <a class="icon-link" href="https://scholar.google.com/citations?user=pe3_XoIAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><i class="ion-university" aria-hidden="true"></i></a>
     </div>
-    <div class="filters" role="group" aria-label="Filter by research theme">
+    <div class="filters" role="group" aria-label="Filter by research theme or awards">
 <button class="filter" type="button" data-filter="" aria-pressed="true">All</button>
 <button class="filter" type="button" data-filter="psychology-and-mental-health" data-theme="psychology-and-mental-health" style="--t: var(--t-1)" aria-pressed="false">Psychology &amp; mental health</button>
 <button class="filter" type="button" data-filter="interpretability-and-steering" data-theme="interpretability-and-steering" style="--t: var(--t-2)" aria-pressed="false">Interpretability &amp; steering</button>
 <button class="filter" type="button" data-filter="safety-and-fairness" data-theme="safety-and-fairness" style="--t: var(--t-3)" aria-pressed="false">Safety &amp; fairness</button>
 <button class="filter" type="button" data-filter="narrative" data-theme="narrative" style="--t: var(--t-4)" aria-pressed="false">Narrative</button>
+<button class="filter filter-award" type="button" data-filter="awards" aria-pressed="false">Awards</button>
     </div>
   </div>
 </section>
@@ -159,12 +160,12 @@
     <span class="pub-meta"><a class="pub-link" href="https://drive.google.com/file/d/15t9XjlLM0LvvkenDAFBWDSKEzgTQ58pH/view" target="_blank" rel="noopener">PDF</a></span>
   </div>
 </li>
-<li class="pub" data-themes="narrative">
-  <span class="pub-venue">TACL 2024<span class="dots" aria-hidden="true"><span class="dot" data-theme="narrative" style="--t: var(--t-4)" title="Narrative"></span></span></span>
+<li class="pub" data-themes="narrative" data-award>
+  <span class="pub-venue">TACL 2024<span class="dots" aria-hidden="true"><span class="dot" data-theme="narrative" style="--t: var(--t-4)" title="Narrative"></span></span><span class="pub-award"><span class="award">Best Paper Award</span></span></span>
   <div class="pub-body">
     <a class="pub-title" href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00702/124837/Reading-Subtext-Evaluating-Large-Language-Models" target="_blank" rel="noopener">Reading Subtext: Evaluating Large Language Models on Short Story Summarization with Writers</a>
     <span class="pub-authors"><strong class="me">Melanie Subbiah</strong>, Sean Zhang, Lydia B. Chilton, Kathleen McKeown</span>
-    <span class="pub-meta"><span class="award">Best Paper Award</span><a class="pub-link" href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00702/124837/Reading-Subtext-Evaluating-Large-Language-Models" target="_blank" rel="noopener">Paper</a><a class="pub-link" href="https://arxiv.org/pdf/2403.01061" target="_blank" rel="noopener">PDF</a></span>
+    <span class="pub-meta"><a class="pub-link" href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00702/124837/Reading-Subtext-Evaluating-Large-Language-Models" target="_blank" rel="noopener">Paper</a><a class="pub-link" href="https://arxiv.org/pdf/2403.01061" target="_blank" rel="noopener">PDF</a></span>
   </div>
 </li>
 <li class="pub" data-themes="narrative">
@@ -231,12 +232,12 @@
     <span class="pub-meta"><a class="pub-link" href="https://workshop-proceedings.icwsm.org/pdf/2021_38.pdf" target="_blank" rel="noopener">PDF</a></span>
   </div>
 </li>
-<li class="pub" data-themes="">
-  <span class="pub-venue">NeurIPS 2020</span>
+<li class="pub" data-themes="" data-award>
+  <span class="pub-venue">NeurIPS 2020<span class="pub-award"><span class="award">Outstanding Paper Award</span></span></span>
   <div class="pub-body">
     <a class="pub-title" href="https://papers.nips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html" target="_blank" rel="noopener">Language Models are Few-Shot Learners</a>
     <span class="pub-authors">Tom B. Brown*, Benjamin Mann*, Nick Ryder*, <strong class="me">Melanie Subbiah*</strong>, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al.</span>
-    <span class="pub-meta"><span class="award">Outstanding Paper Award</span><a class="pub-link" href="https://papers.nips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html" target="_blank" rel="noopener">Paper</a><a class="pub-link" href="https://papers.nips.cc/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf" target="_blank" rel="noopener">PDF</a><a class="pub-link" href="assets/gpt3-slides.pdf">Slides</a></span>
+    <span class="pub-meta"><a class="pub-link" href="https://papers.nips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html" target="_blank" rel="noopener">Paper</a><a class="pub-link" href="https://papers.nips.cc/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf" target="_blank" rel="noopener">PDF</a><a class="pub-link" href="assets/gpt3-slides.pdf">Slides</a></span>
   </div>
 </li>
 <li class="pub" data-themes="">
@@ -268,13 +269,14 @@
 </div>
 
 <script>
-  // Theme filter: hides entries without the chosen theme.
+  // Theme filter: hides entries without the chosen theme ("awards" keeps award-winning papers).
   const buttons = document.querySelectorAll(".filter");
   buttons.forEach(btn => btn.addEventListener("click", () => {
     const theme = btn.dataset.filter;
     buttons.forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
     document.querySelectorAll(".pub").forEach(li => {
-      li.hidden = theme !== "" && !li.dataset.themes.split(" ").includes(theme);
+      const keep = theme === "" || (theme === "awards" ? li.hasAttribute("data-award") : li.dataset.themes.split(" ").includes(theme));
+      li.hidden = !keep;
     });
   }));
   // publications.html#<theme> opens with that filter applied (linked from the homepage)

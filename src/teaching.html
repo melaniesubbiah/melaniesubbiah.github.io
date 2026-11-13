@@ -10,55 +10,72 @@ nav: teaching
 </section>
 
 <div class="wrap page-body">
-  <section class="block" id="teaching">
-    <h2>Teaching</h2>
-    <div class="course-list">
-      <article class="course">
-        <div class="course-meta"><p class="course-when">2023</p><p class="course-role">Instructor</p></div>
-        <div class="course-main">
-          <h3>Discrete Mathematics</h3>
-          <p class="course-where">Columbia University</p>
-        </div>
-        <dl class="ratings">
-          <div><dt>Instructor quality</dt><dd><span class="meter" style="--v: .9"></span>4.5</dd></div>
-          <div><dt>Course quality</dt><dd><span class="meter" style="--v: .84"></span>4.2</dd></div>
-        </dl>
-      </article>
-      <article class="course">
-        <div class="course-meta"><p class="course-when">2022, 2023</p><p class="course-role">Teaching assistant &amp; guest lecturer</p></div>
-        <div class="course-main">
-          <h3>Natural Language Generation &amp; Summarization</h3>
-          <p class="course-where">Columbia University</p>
-        </div>
-        <dl class="ratings">
-          <div><dt>TA quality, 2022</dt><dd><span class="meter" style="--v: .98"></span>4.9</dd></div>
-          <div><dt>TA quality, 2023</dt><dd><span class="meter" style="--v: .94"></span>4.7</dd></div>
-        </dl>
-      </article>
-      <article class="course">
-        <div class="course-meta"><p class="course-when">2014&ndash;2017</p><p class="course-role">Teaching assistant</p></div>
-        <div class="course-main">
-          <h3>Intro CS &amp; Data Structures</h3>
-          <p class="course-where">Williams College</p>
-        </div>
-        <dl class="ratings">
-          <div><dt>Semesters as a TA</dt><dd><span class="pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>6</dd></div>
-        </dl>
-      </article>
-    </div>
+  <div class="teaching-cols">   <!-- courses taught on the left, guest lectures on the right -->
+    <section class="block" id="teaching">
+      <h2>Teaching</h2>
+      <div class="course-list">
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2023</p><p class="course-role">Instructor</p></div>
+          <div class="course-main">
+            <h3>Discrete Mathematics</h3>
+            <p class="course-where">Columbia University</p>
+          </div>
+        </article>
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2022, 2023</p><p class="course-role">Teaching assistant</p></div>
+          <div class="course-main">
+            <h3>Natural Language Generation &amp; Summarization</h3>
+            <p class="course-where">Columbia University</p>
+          </div>
+        </article>
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2014&ndash;2017</p><p class="course-role">Teaching assistant</p></div>
+          <div class="course-main">
+            <h3>Intro CS &amp; Data Structures</h3>
+            <p class="course-where">Williams College</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <h3 class="subhead">Guest lectures</h3>
-    <ul class="lecture-list">
-      <li><span class="lecture-when">2025</span><span class="lecture-what"><strong>Computing in Context</strong> Columbia University</span></li>
-      <li><span class="lecture-when">2024</span><span class="lecture-what"><strong>Global Teaching Labs</strong> MIT &amp; University of Montevideo, Uruguay</span></li>
-      <li><span class="lecture-when">2023</span><span class="lecture-what"><strong>Computational Journalism</strong> Columbia University</span></li>
-      <li><span class="lecture-when">2022, 2023</span><span class="lecture-what"><strong>Natural Language Generation &amp; Summarization</strong> Columbia University</span></li>
-    </ul>
-  </section>
+    <section class="block" id="guest-lectures">
+      <h2>Guest lectures</h2>
+      <div class="course-list">
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2025</p></div>
+          <div class="course-main">
+            <h3>Computing in Context</h3>
+            <p class="course-where">Columbia University</p>
+          </div>
+        </article>
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2024</p></div>
+          <div class="course-main">
+            <h3>Global Teaching Labs</h3>
+            <p class="course-where">MIT &amp; University of Montevideo, Uruguay</p>
+          </div>
+        </article>
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2023</p></div>
+          <div class="course-main">
+            <h3>Computational Journalism</h3>
+            <p class="course-where">Columbia University</p>
+          </div>
+        </article>
+        <article class="course">
+          <div class="course-meta"><p class="course-when">2022, 2023</p></div>
+          <div class="course-main">
+            <h3>Natural Language Generation &amp; Summarization</h3>
+            <p class="course-where">Columbia University</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
 
   <section class="block" id="mentoring">
     <h2>Mentoring</h2>
-    <p class="block-intro">Mentoring students is one of my favorite parts of research. This diagram summarizes outcomes for students I have worked with.</p>
+    <p class="block-intro">Mentoring students is one of my favorite parts of research. This <a href="https://en.wikipedia.org/wiki/Sankey_diagram" target="_blank" rel="noopener">Sankey diagram</a> summarizes outcomes for students I have worked with.</p>
     {{ mentee_flow }}
   </section>
 

@@ -1,27 +1,29 @@
 /* ------------------------------------------------------------------ tokens */
 
+/* Palette: the original site's yellow (saturated to #F4D35E) and orange-red #D4502F, with cobalt blue #174F88 and the old dark-green text #192319,
+   on a faint-yellow page: yellow header with blue accents, blue marker highlights, orange-red links and round icons, yellow award stickers. */
 :root {
-  --bg:        #FBF8F3;   /* warm off-white */
-  --bg-alt:    #F3EDE3;
+  --bg:        #FEFCF6;   /* near-white warm cream */
+  --bg-alt:    #FCF2D0;   /* the header yellow at ~25% on the page cream: the footer band */
   --card:      #FFFFFF;
-  --ink:       #1F1A17;
-  --ink-soft:  #5A524B;
-  --ink-faint: #8C837A;
-  --rule:      #E7DFD3;
-  --primary:   #C2501F;   /* burnt orange: links and accents */
-  --primary-ink: #A23F14;
-  --highlight: #FBDF8C;   /* marker yellow */
-  --award-bg:  #FBDF8C;
-  --award-ink: #3D2E00;
+  --ink:       #192319;   /* the old site's dark-green text */
+  --ink-soft:  #4A524A;
+  --ink-faint: #858B85;
+  --rule:      #F1E6C0;   /* yellow-tinted lines */
+  --primary:   #D4502F;   /* the old site's orange-red: round icon buttons, links, the news timeline dots */
+  --primary-ink: #C04527; /* link and text orange: a step darker than the icons for 4.5:1 on the page and footer */
+  --highlight: rgba(23, 79, 136, .2);   /* blue marker: the header-accent blue, see-through */
+  --award-bg:  #F4D35E;   /* the old yellow */
+  --award-ink: #192319;
   --on-primary: #FFFFFF;
-  --flow-ug: #C2501F;   /* mentee flow: undergrads (CVD-checked pair, as drawn at band opacity) */
-  --flow-ms: #7B4A86;   /* mentee flow: master's students (the plum of --t-3) */
+  --flow-ug: #D4502F;   /* mentee flow: undergrads (the orange, as the links) */
+  --flow-ms: #174F88;   /* mentee flow: master's students (the blue) */
 
   /* research-theme colors, assigned to tags in display order by build.py (THEME_COLORS) */
-  --t-1:  #9B2226;   /* deep red */
-  --t-2:  #2E73AE;   /* blue */
-  --t-3:  #7B4A86;   /* plum */
-  --t-4:  #94694A;   /* brown */
+  --t-1:  #174F88;   /* the header blue; t-1..t-4 pass the CVD check (all pairs) */
+  --t-2:  #D4502F;   /* the old orange-red */
+  --t-3:  #2E8B57;   /* sea green: lighter than the blue so the two read apart */
+  --t-4:  #9B6FC4;   /* soft purple, a nod to the original site's purple */
   --t-5:  #D07A8C;   /* rose */
   --t-6:  #8A5A3B;   /* umber */
   --t-7:  #2F7A78;   /* teal */
@@ -31,45 +33,45 @@
   --t-11: #B86B2E;   /* copper */
   --t-12: #5B4E8C;   /* indigo */
 
-  /* top bar: deep olive with cream text and mustard accents */
-  --header-bg:   #3B4A2C;
-  --header-ink:  #FBF6EC;
-  --header-soft: #D3D9C4;
-  --header-accent: #F2C14E;
+  /* top bar: yellow with a black name, dark-green nav, blue accents */
+  --header-bg:   #F4D35E;   /* the old site's yellow */
+  --header-ink:  #192319;
+  --header-soft: #2E3A2E;
+  --header-accent: #174F88;   /* cobalt blue: current-page underline, CV pill */
 
 
-  /* fonts match the CV: Cabin + Cochineal (Crimson Text is its web-available original) */
-  --display: "Cabin", "Helvetica Neue", Arial, sans-serif;
+  /* fonts: Reddit Sans (sans) + Crimson Text (body; the web-available original of the CV's Cochineal) */
+  --display: "Reddit Sans", "Helvetica Neue", Arial, sans-serif;
   --body:    "Crimson Text", "Cochineal", Georgia, serif;
   --serif:   "Crimson Text", "Cochineal", Georgia, serif;
 
-  --wrap: 1120px;   /* wide enough that the intro's first line ends with "mutual interpretability:" */
+  --wrap: 1140px;   /* wide enough that the intro's first line ends with "mutual interpretability:" (~721px in Reddit Sans) */
   color-scheme: light;
 }
 
-/* dark mode: warm charcoal (not black) under the same olive header, so the site reads as one design */
+/* dark mode: deep navy from the header blue, cream text, and a softened gold header so it doesn't glare */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:        #1F1E1A;
-    --bg-alt:    #272620;
-    --card:      #2C2B25;
-    --ink:       #EEE8DC;
-    --ink-soft:  #C9C0AF;
-    --ink-faint: #9A917F;
-    --rule:      #3D3B32;
-    --primary:   #EE8B5A;
-    --primary-ink: #F4A47A;
-    --on-primary: #1F1E1A;
-    --flow-ug: #D46A36;
-    --flow-ms: #C69AD2;
-    --highlight: rgba(242, 193, 78, .32);
-    --award-bg:  #FBDF8C;   /* award stickers look the same in both modes */
-    --award-ink: #3D2E00;
-    /* --header-* are deliberately not overridden: the olive header is identical in both modes */
-    --t-1:  #C8585E;
-    --t-2:  #3F78BD;
-    --t-3:  #D2A2E8;
-    --t-4:  #C69A72;
+    --bg:        #0F1B2B;   /* deep navy, from the header blue #174F88 */
+    --bg-alt:    #15243A;   /* footer band */
+    --card:      #1A2C45;
+    --ink:       #F2EEE3;   /* warm cream, as the light page */
+    --ink-soft:  #C9C3B5;
+    --ink-faint: #948E82;
+    --rule:      #263A55;
+    --primary:   #FF8257;
+    --primary-ink: #FF8257;
+    --on-primary: #0F1B2B;
+    --flow-ug: #FF8257;
+    --flow-ms: #5C93D6;
+    --highlight: rgba(92, 147, 214, .38);
+    --award-bg:  #D9B84A;   /* the softened header gold */
+    --award-ink: #192319;
+    --header-bg: #D9B84A;   /* the header yellow softened to a deeper gold so it doesn't glare on the navy; name and nav keep their colors */
+    --t-1:  #5C93D6;   /* t-1..t-4 pass the CVD check in dark mode (all pairs) */
+    --t-2:  #FF8257;
+    --t-3:  #2C7A4B;
+    --t-4:  #DDB6F0;
     --t-5:  #F4B6C4;
     --t-6:  #C9986F;
     --t-7:  #6CC0BC;
@@ -95,7 +97,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font: 400 1.0625rem/1.6 var(--body);
-  font-size-adjust: .48;   /* Crimson Text has a small x-height; match it to Cabin */
+  font-size-adjust: .48;   /* Crimson Text has a small x-height; match it to Reddit Sans */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -106,8 +108,8 @@ p { margin: 0 0 1.1em; }
 img { max-width: 100%; height: auto; display: block; }
 
 a { color: var(--primary-ink); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, var(--primary) 35%, transparent); }
-a:hover { color: var(--primary); text-decoration-style: wavy; text-decoration-color: currentColor; text-decoration-thickness: 1px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; border-radius: 4px; }
+a:hover { color: var(--primary-ink); text-decoration-style: wavy; text-decoration-color: currentColor; text-decoration-thickness: 1px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--primary-ink); outline-offset: 3px; border-radius: 4px; }
 
 /* marker-pen highlight */
 mark {
@@ -123,6 +125,7 @@ mark {
 
 /* the name in the user's handwriting: cream with a heavier pen in the header, dark ink in the footer */
 .signature { display: block; height: 34px; width: auto; }
+.wordmark .signature { filter: brightness(0) drop-shadow(1px 0 0 #000) drop-shadow(0 .8px 0 #000); }   /* the cream header image turned black, then thickened ~1px with offset shadows (a filter, not a mask: see CLAUDE.md) */
 @media (prefers-color-scheme: dark) { .footer-name .signature { filter: invert(1) sepia(.25) brightness(.95); } }   /* dark ink -> warm off-white */
 
 .skip { position: absolute; left: -999px; top: .5rem; background: var(--ink); color: var(--bg); padding: .5rem 1rem; z-index: 10; }
@@ -137,9 +140,9 @@ mark {
 
 /* ------------------------------------------------------------------ header */
 
-/* full-width olive bar. Dog 1 sits by the name; dog 2 stands in front of the current page.
+/* full-width navy bar. Dog 1 sits by the name; dog 2 stands in front of the current page.
    Both dogs link to their photos on dogs.html. */
-.site-header { background: var(--header-bg); color: var(--header-ink); }
+.site-header { background: var(--header-bg); color: var(--header-ink); border-bottom: 1px solid var(--rule); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: .5rem 1.5rem; min-height: 4.25rem; flex-wrap: wrap; }
 
 .brand { display: inline-flex; align-items: center; gap: .55rem; }
@@ -150,8 +153,9 @@ mark {
 .dog img { display: block; width: 100%; height: auto; }
 .dog:hover img { animation: hop .5s ease 2; }
 .dog-1 { width: 34px; margin-top: -4px; }
-.dog-1 img { filter: drop-shadow(0 0 .6px var(--header-ink)) drop-shadow(0 0 .6px var(--header-ink)); }   /* Mango is black: outline him against the olive */
+/* Mango is black and reads on the yellow without a glow */
 .dog-2 { width: 26px; margin-top: -3px; }
+.dog-2 img { filter: drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000); }   /* Luna is white: a soft black glow keeps her off the yellow */
 
 @keyframes hop {
   0%, 100% { transform: translateY(0); }
@@ -160,10 +164,10 @@ mark {
 
 .nav { list-style: none; display: flex; flex-wrap: wrap; gap: .25rem 1.4rem; margin: 0; padding: 0; }
 .nav li { display: flex; align-items: center; gap: .35rem; }
-.nav a:not(.dog) { font: 500 .98rem/1 var(--display); color: var(--header-soft); text-decoration: none; padding: .4rem 0; }
+.nav a:not(.dog) { font: 500 .95rem/1 var(--display);   /* same size as the research-theme pills */ color: var(--header-soft); text-decoration: none; padding: .4rem 0; }
 .nav a:not(.dog):hover { color: var(--header-ink); text-decoration: underline wavy var(--header-accent) 1px; text-underline-offset: 6px; }
 .nav a[aria-current="page"] { color: var(--header-ink); text-decoration: underline 2px var(--header-accent); text-underline-offset: 6px; }
-.nav a.nav-cv { color: var(--header-bg); background: var(--header-accent); border-radius: 999px; padding: .4rem .9rem; font-weight: 700; }
+.nav a.nav-cv { color: #FFFFFF; background: var(--header-accent); border-radius: 999px; padding: .4rem .9rem; font-weight: 700; }
 .nav a.nav-cv:hover { color: var(--header-bg); background: var(--header-ink); text-decoration: none; }
 .site-header a:focus-visible { outline-color: var(--header-accent); }
 
@@ -190,13 +194,14 @@ mark {
 }
 
 .profile-name { font-size: 1.85rem; margin-bottom: .35rem; }
-.profile-title { color: var(--ink-soft); font-size: .97rem; line-height: 1.5; margin-bottom: 1.1rem; }
+.profile-title { color: var(--ink-soft); font-family: var(--display); font-size: 1.02rem; line-height: 1.5; margin-bottom: 1.1rem; }   /* sans like the name; the Contact line below stays serif */
+.profile-title strong { color: var(--primary-ink); font-weight: 700; }   /* the orange-red */
 .profile-links { list-style: none; padding: 0; margin: 0; font-size: .95rem; }
 .profile-links li { padding: .3rem 0; }
 .profile-links .email { color: var(--ink-soft); }
 .email strong { color: var(--ink); font-weight: 600; }
 /* the email in the user's handwriting, sized to sit on the text line beside "Contact:" */
-.email-link { display: inline-block; vertical-align: middle; }   /* an image of the address, not a link */
+.email-link { display: inline-block; vertical-align: -1.8px; }   /* an image of the address, not a link; drops the image so the letters' bottoms (row ~168 of 188) sit on the text baseline */
 .email-link .handwritten { display: block; height: 17px; width: auto; }   /* same size in the sidebar and the footer */
 .profile-links .email { white-space: nowrap; }   /* "Contact:" + email together span the headshot width */
 @media (prefers-color-scheme: dark) { .email-link .handwritten { filter: invert(1) sepia(.25) brightness(.95); } }
@@ -209,11 +214,12 @@ mark {
   .profile-links { grid-column: 1 / -1; margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
 }
 
-.content { max-width: 44rem; }
+.content { max-width: 46.5rem; }
 .content section + section { margin-top: 3.5rem; }
 .content h2 { margin-bottom: 1rem; }
 
 .intro { font: 500 1.4rem/1.45 var(--display); letter-spacing: -.01em; }
+.intro mark { white-space: nowrap; }   /* "mutual interpretability" never splits across lines */
 
 .themes { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 .themes a {
@@ -236,17 +242,22 @@ mark {
 /* ------------------------------------------------------------------ publications */
 
 .pub-list { list-style: none; padding: 0; margin: 0; }
-.pub { display: grid; grid-template-columns: 9.5rem 1fr; gap: 1.25rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+.pub { display: grid; grid-template-columns: 11.5rem 1fr; gap: 1.25rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
 .content .pub { grid-template-columns: 1fr; gap: .15rem; }
 .content .pub:first-child { padding-top: .25rem; }
 .pub[hidden] { display: none; }
 .dots { display: inline-flex; gap: .3rem; }
+.pub-venue .dots { flex-basis: 100%; }   /* theme dots on their own line under the venue */
 .pub-venue { color: var(--ink-faint); display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; align-self: start; padding-top: .2rem; }
 .pub-body { display: flex; flex-direction: column; gap: .15rem; }
 .pub-title { font: 700 1.08rem/1.35 var(--display); letter-spacing: -.01em; color: var(--ink); text-decoration: none; }
 a.pub-title:hover { color: var(--primary-ink); text-decoration: underline wavy 1px; text-underline-offset: 4px; }
 .pub-authors { color: var(--ink-soft); font-size: .93rem; line-height: 1.5; }
-.pub-authors .me { color: var(--ink); font-weight: 600; }
+.pub-authors .me {   /* the author's own name: marker highlight, like <mark> */
+  color: var(--ink); font-weight: 600;
+  background: linear-gradient(100deg, transparent .15em, var(--highlight) .15em, var(--highlight) calc(100% - .2em), transparent calc(100% - .2em)) 0 62% / 100% 58% no-repeat;
+  padding: 0 .12em; -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
 .pub-blurb { font: italic 400 1.08rem/1.4 var(--serif); color: var(--ink-soft); margin-top: .2rem; }
 .pub-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .45rem; margin-top: .35rem; }
 .pub-meta:empty { display: none; }
@@ -254,7 +265,7 @@ a.pub-title:hover { color: var(--primary-ink); text-decoration: underline wavy 1
   font-size: .8rem; font-weight: 600; text-decoration: none; color: var(--ink);
   border: 1px solid var(--rule); background: var(--card); border-radius: 999px; padding: .2rem .65rem;
 }
-.pub-link:hover { border-color: var(--primary); color: var(--primary-ink); text-decoration: none; }
+.pub-link:hover { border-color: var(--primary-ink); color: var(--primary-ink); text-decoration: none; }
 
 .award {
   display: inline-block; font-size: .78rem; font-weight: 600; line-height: 1.3;
@@ -264,6 +275,8 @@ a.pub-title:hover { color: var(--primary-ink); text-decoration: underline wavy 1
   box-shadow: 0 1px 0 rgba(0, 0, 0, .08);
 }
 .award::before { content: "\2605\00a0"; }
+.pub-award { flex-basis: 100%; margin-top: .15rem; }   /* the award sticker, on its own line under the venue */
+.pub-award .award { font-family: var(--body); text-transform: none; letter-spacing: normal; white-space: nowrap; }
 
 
 @media (max-width: 640px) { .pub { grid-template-columns: 1fr; gap: .15rem; } }
@@ -284,12 +297,19 @@ a.pub-title:hover { color: var(--primary-ink); text-decoration: underline wavy 1
   font: 500 .9rem/1 var(--display); color: var(--ink-soft);
   background: var(--card); border: 1.5px solid var(--rule); border-radius: 999px;
   padding: .55rem .9rem; cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease;
 }
 .filter[data-theme]::before { content: ""; width: .6rem; height: .6rem; border-radius: 50%; background: var(--t); }
 .filter[data-theme][aria-pressed="true"] { background: var(--t); border-color: var(--t); color: var(--on-primary); }
 .filter[data-theme][aria-pressed="true"]::before { background: var(--on-primary); }
 .filter:hover { border-color: var(--ink-faint); color: var(--ink); }
+.filter:hover { transform: translateY(-2px) rotate(-1deg); }   /* same hover tilt as the homepage theme pills */
+.filter[data-theme]:hover { border-color: var(--t); }
+@media (prefers-reduced-motion: reduce) { .filter, .filter:hover { transition: none; transform: none; } }
 .filter[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.filter-award::before { content: "\2605"; color: var(--ink); font: 600 .78rem/1 var(--body); }   /* same star as the award stickers */
+.filter-award[aria-pressed="true"] { background: var(--award-bg); border-color: var(--award-bg); color: var(--award-ink); }
+.filter-award[aria-pressed="true"]::before { color: var(--award-ink); }
 
 .pub-all { margin-top: 2rem; border-top: 2px solid var(--ink); }
 .footnote { color: var(--ink-faint); font-size: .9rem; margin-top: 1.5rem; }
@@ -298,53 +318,40 @@ a.pub-title:hover { color: var(--primary-ink); text-decoration: underline wavy 1
 .block { margin-top: 3.5rem; }
 .block > h2 { margin-bottom: 1.25rem; }
 .block-intro { color: var(--ink-soft); }
-.subhead { font-size: 1.1rem; margin: 2.25rem 0 .9rem; }
 /* ------------------------------------------------------------------ teaching components */
 
 
-.course { display: grid; grid-template-columns: 10rem minmax(0, 1fr) 15rem; gap: 1.5rem; padding: 1.25rem 0; border-bottom: 1px solid var(--rule); }
+.teaching-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 3.5rem; }   /* courses | guest lectures */
+@media (max-width: 900px) { .teaching-cols { grid-template-columns: 1fr; } }
+.course { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 1.25rem; padding: 1.1rem 0; border-bottom: 1px solid var(--rule); }
 .course:first-child { padding-top: .5rem; }
 .course p { margin: 0; }
 .course-when { font: 600 .95rem/1.4 var(--display); color: var(--ink); }
-.course-role { font: 600 .72rem/1.4 var(--display); letter-spacing: .08em; text-transform: uppercase; color: var(--primary-ink); margin-top: .3rem; }
+.course-role { font: 700 1.02rem/1.4 var(--display); color: var(--primary-ink); margin-top: .3rem; }   /* same look as "Postdoctoral Researcher" on the homepage */
 .course h3 { font-size: 1.18rem; margin-bottom: .2rem; }
 .course-where { color: var(--ink-faint); font-size: .95rem; }
-.ratings { margin: 0; display: grid; gap: .55rem; align-content: start; }
-.ratings dt { font-size: .8rem; color: var(--ink-faint); }
-.pips { flex: 1; display: flex; gap: 4px; }   /* a count shown as filled segments, matching the rating meters */
-.pips i { flex: 1; height: .45rem; border-radius: 999px; background: var(--header-accent); }
-
-.lecture-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
-.lecture-list li { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 1.5rem; padding: .7rem 0; border-bottom: 1px solid var(--rule); }
-.lecture-when { font: 600 .95rem/1.5 var(--display); }
-.lecture-what { color: var(--ink-faint); }
-.lecture-what strong { font: 600 1.02rem/1.5 var(--display); color: var(--ink); margin-right: .5rem; }
-@media (max-width: 820px) { .lecture-list li { grid-template-columns: 1fr; gap: .1rem; } }
-@media (max-width: 820px) {
+@media (max-width: 560px) {
   .course { grid-template-columns: 1fr; gap: .5rem; }
   .course-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .75rem; }
   .course-role { margin-top: 0; }
-  .ratings { max-width: 20rem; margin-top: .35rem; }
 }
-.ratings dd { margin: .15rem 0 0; display: flex; align-items: center; gap: .6rem; font: 700 .95rem/1 var(--display); }
-.meter { flex: 1; height: .45rem; border-radius: 999px; background: var(--bg-alt); position: relative; overflow: hidden; }
-.meter::after { content: ""; position: absolute; inset: 0 auto 0 0; width: calc(var(--v) * 100%); background: var(--header-accent); border-radius: inherit; }
 
 
 /* mentee flow (Sankey) diagram, drawn by build.py */
-.mentee-flow { margin: 0 0 2rem; max-width: 820px; }
+.mentee-flow { margin: 0 0 2rem; max-width: 880px; }
 .mentee-flow svg { display: block; width: 100%; height: auto; overflow: visible; }
-.flow-band { opacity: .65; }
+.flow-band { opacity: .8; }   /* orange and blue bands, as drawn on the page cream, pass the CVD check and 3:1 */
 @media (prefers-color-scheme: dark) { .flow-band { opacity: .75; } }
 .flow-ug { fill: var(--flow-ug); }
 .flow-ms { fill: var(--flow-ms); }
 .flow-node { fill: var(--ink); }
+.flow-leader { stroke: var(--ink); stroke-width: 1; }   /* thin line tying a label to its node */
 .flow-label { font: 600 13px var(--display); fill: var(--ink); }
 .flow-label-mid { paint-order: stroke; stroke: var(--bg); stroke-width: 4px; stroke-linejoin: round; }
 .flow-count { font-weight: 400; fill: var(--ink-faint); }
 .flow-key { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; margin-top: .6rem; font: 500 .85rem/1.3 var(--display); color: var(--ink-soft); }
 .flow-key span { display: inline-flex; align-items: center; gap: .45rem; }
-.flow-swatch { display: inline-block; width: 1.1rem; height: .7rem; border-radius: 3px; opacity: .65; }
+.flow-swatch { display: inline-block; width: 1.1rem; height: .7rem; border-radius: 3px; opacity: .8; }
 .flow-swatch.flow-ug { background: var(--flow-ug); }
 .flow-swatch.flow-ms { background: var(--flow-ms); }
 @media (prefers-color-scheme: dark) { .flow-swatch { opacity: .75; } }
